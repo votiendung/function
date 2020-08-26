@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem tra so nguyen duong</title>
+</head>
+<body>
+<script>
+    let numbers = prompt('input');
+    function f(num) {
+        if (!isNaN(num)) {
+            if ((num = parseInt(num)  && num > 0 )) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            alert('moi ban nhap lai');
+        }
+    }
+    alert(f(numbers));
+</script>
+</body>
+</html>

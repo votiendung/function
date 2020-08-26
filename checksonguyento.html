@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ham check so nguyen to</title>
+</head>
+<body>
+<script>
+    let check = true;
+    let num = +prompt('nhap so');
+function checkNum(number) {
+    if (number < 2) {
+        return false;
+    }else {
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number%i ==0) {
+                return false;
+                break;
+            }
+        }
+
+    }
+    if (check = true) {
+        return number ;
+    }else {
+        alert('khong phai la so nguyen to');
+    }
+}
+let rs = " nhung so nguyen to duoi 10000 la:" + "<br>";
+for (let i = 2; i < num; i++) {
+    if (checkNum(i)) {
+        rs += i + " ";
+    }
+}
+document.write(rs);
+</script>
+</body>
+</html>

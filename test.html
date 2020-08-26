@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test function</title>
+</head>
+<body>
+<input type="text" id="demo" oninput="myfun()">
+<span id="ketqua"></span>
+<script>
+    function square(number) {
+        var result = number*number;
+        return result;
+    }
+    function myfun() {
+        var num = document.getElementById("demo").value;
+        var binhphuong = square(num);
+        document.getElementById("ketqua").innerHTML = binhphuong;
+    }
+</script>
+</body>
+</html>

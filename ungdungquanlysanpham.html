@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button {
+            background-color: chartreuse;
+            border-color: chartreuse;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 70%;
+            height: 60%;
+        }
+
+        td, th {
+            text-align: left;
+            padding: 8px;
+            width: 70%;
+            height: 30%;
+            border: 1px solid #dddddd;
+        }
+    </style>
+</head>
+<body onload="showAllProduct();">
+<p>
+    <input type="text" id="inputProduct">
+    <button onclick="addProduct()">Add</button>
+</p>
+<div id="show"></div>
+
+<script>
+    let productList = ['ao so mi', 'ao vest', 'ao phong','quan kaki'];
+
+    function showAllProduct() {
+        let table = "<table>";
+        table += "<tr>" +
+            "<td>Product Name</td>" +
+            "<td>Action</td>" +
+            "</tr>"
+        for (let i = 0; i < productList.length; i++) {
+            table += "<tr>" +
+                "<td>" + productList[i] + "</td>" +
+                "<td><button onclick='editProduct("+i+")'>Edit</button></td>" +
+                "<td><button onclick='deleteProduct("+i+")'>Delete</button></td>" +
+                "</tr>";
+        }
+        table += "</table>";
+        document.getElementById("show").innerHTML = table;
+    }
+    function addProduct () {
+        let newProduct = document.getElementById("inputProduct").value;
+        productList.push(newProduct);
+        showAllProduct();
+    }
+    function deleteProduct(index) {
+        if (confirm("ban co chac chan ko???")){
+            productList.splice(index,1);
+            showAllProduct();
+        }
+    }
+    function editProduct(index) {
+        let newProduct = prompt('nhap ten' + index);
+        productList[index] = newProduct;
+        showAllProduct();
+    }
+
+
+
+
+
+</script>
+</body>
+</html>

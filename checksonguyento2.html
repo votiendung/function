@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    let index = "cac so nguyen to duoi 100000 la:" + "<br>" ;
+    for (let i = 2; i < 100000; i++) {
+        if (isPrime(i)) {
+            index += i + " ";
+        }
+    }
+    document.write(index);
+
+</script>
+</body>
+</html>

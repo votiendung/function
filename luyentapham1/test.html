@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    debugger;
+    let arr1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let arr2 = ['Ursa Minor', 'Tarurus', 'Cygnus', ' Lyra', 'Aquila', 'Ursa', 'Major Leo'];
+
+    function check(myArr) {
+        let str = prompt('nhap chom sao');
+        let index = -1;
+        for (let i = 0; i < myArr.length; i++) {
+            if (str == myArr[i]) {
+                index = i;
+                break;
+            }
+        }
+        if (index != (-1)) {
+            return index;
+        } else {
+            alert('khong phai ngoi sao')
+        }
+
+    }
+
+    alert(arr2[check(arr1)]);
+</script>
+</body>
+</html>

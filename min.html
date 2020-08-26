@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Min</title>
+</head>
+<body>
+<script>
+    let arr1 = [3, 5, 1, 8, -3, 7, 8];
+    let arr2 = [7, 12, 6, 9, 20, 56, 89]
+
+    let arr3 = []
+
+    let arr4 = [0, 0, 0, 0, 0, 0]
+
+    function minNumber(num) {
+        let min = num[0];
+        for (let i = 0; i < num.length; i++) {
+            if (min > num[i]) {
+                min = num[i];
+            }
+        }
+        return min;
+    }
+
+    document.write("gia tri nho nhat cua mang la: " + minNumber(arr1) + "<br>");
+    document.write("gia tri nho nhat cua mang la: " + minNumber(arr2)+ "<br>");
+    document.write("gia tri nho nhat cua mang la: " + minNumber(arr3)+ "<br>");
+    document.write("gia tri nho nhat cua mang la: " + minNumber(arr4));
+
+</script>
+</body>
+</html>
